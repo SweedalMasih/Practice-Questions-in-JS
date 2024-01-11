@@ -1,4 +1,4 @@
-let y = 30 ;
+let y = 30;
 
 function bar() {
   console.log(y);
@@ -6,3 +6,5 @@ function bar() {
 }
 
 bar();
+
+// ReferenceError: Cannot access 'y' before initialization
