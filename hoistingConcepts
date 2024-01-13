@@ -14,3 +14,14 @@ z = 30;
 console.log(z);
 
 // TypeError: Assignment to constant variable
+
+var x = 10;
+function foo() {
+  if (true) {
+    var x = 20;
+    let y = 30;
+    console.log(x, y); // 20 20
+  }
+  console.log(x); // 20
+}
+foo();
