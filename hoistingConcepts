@@ -34,3 +34,12 @@ function outer() {
   var x = 20;
 }
 outer();
+
+// 5
+var x = 10;
+function foo() {
+  var x = 20;
+  console.log(x); // 20
+}
+foo();
+console.log(x); // 10
