@@ -44,7 +44,7 @@ function foo() {
 foo();
 console.log(x); // 10
 
-// 5
+// 6
 function foo() {
   if (true) {
     var x = 10;
@@ -55,7 +55,7 @@ function foo() {
 }
 foo();
 
-// 6
+// 7
 function outer() {
   var x = 10;
   function inner() {
@@ -65,3 +65,14 @@ function outer() {
 }
 var innerFn = outer();
 innerFn();
+
+// 8
+function foo() {
+  var a = 5;
+  if (true) {
+    var a = 10;
+    console.log(a); // 10
+  }
+  console.log(a); // 10
+}
+foo();
