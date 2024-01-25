@@ -76,3 +76,15 @@ function foo() {
   console.log(a); // 10
 }
 foo();
+
+// 9
+var a = 1;
+function outer() {
+  console.log(a); // undefined
+  var a = 2;
+  inner();
+  function inner() {
+    console.log(a); // 2
+  }
+}
+outer();
