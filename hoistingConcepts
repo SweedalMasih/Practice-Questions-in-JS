@@ -88,3 +88,18 @@ function outer() {
   }
 }
 outer();
+
+// 10
+function createFunctions() {
+  var result = [];
+  for (var i = 0; i < 5; i++) {
+    result.push(function () {
+      console.log(i);
+    });
+  }
+  return result;
+}
+var functions = createFunctions();
+for (var j = 0; j < functions.length; j++) {
+  functions[j]();
+}
