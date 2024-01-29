@@ -103,3 +103,7 @@ var functions = createFunctions();
 for (var j = 0; j < functions.length; j++) {
   functions[j]();
 }
+
+// 11
+console.log(x); // ReferenceError: x is not defined
+let x = 10;
