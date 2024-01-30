@@ -107,3 +107,14 @@ for (var j = 0; j < functions.length; j++) {
 // 11
 console.log(x); // ReferenceError: x is not defined
 let x = 10;
+
+// 12
+function outer() {
+  var a = 10;
+  function inner() {
+    console.log(a);
+  }
+  return inner;
+}
+var closureFunction = outer();
+closureFunction();
