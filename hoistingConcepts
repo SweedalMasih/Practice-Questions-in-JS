@@ -112,9 +112,19 @@ let x = 10;
 function outer() {
   var a = 10;
   function inner() {
-    console.log(a);
+    console.log(a); // 10
   }
   return inner;
 }
 var closureFunction = outer();
 closureFunction();
+
+// 13
+function add(a) {
+  return function (b) {
+    return a + b;
+  };
+}
+var addFive = add(5);
+var result = addFive(3);
+console.log(result); // 8
