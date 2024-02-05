@@ -136,3 +136,9 @@ function foo() {
 foo();
 
 // Uncaught RangeError: Maximum call stack size exceeded
+
+// 15
+const obj1 = { x: 10 };
+const obj2 = { x: 10 };
+console.log(obj1 === obj2); // false
+console.log(obj1 == obj2); // false
