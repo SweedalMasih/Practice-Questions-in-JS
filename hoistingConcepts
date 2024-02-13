@@ -160,3 +160,15 @@ function outer() {
   var x = 10;
 }
 outer();
+
+// 18
+function greet() {
+  var name = "World";
+  return function () {
+    console.log("Hello, " + name + "!");
+  };
+}
+var greetingFunction = greet();
+greetingFunction();
+
+// Hello, World!
