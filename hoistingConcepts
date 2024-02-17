@@ -180,3 +180,15 @@ for (var i = 0; i < 5; i++) {
   }, 1000);
 }
 // 5 5 5 5 5
+
+// 20
+var a = 5;
+function outer() {
+  console.log(a); // undefined
+  var a = 10;
+  function inner() {
+    console.log(a); // 10
+  }
+  inner();
+}
+outer();
