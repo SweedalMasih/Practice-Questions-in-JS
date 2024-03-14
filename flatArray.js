@@ -31,3 +31,21 @@ const flattenArray = (arr) => {
 
 flattenArray(arr3);
 console.log(newArr2);
+
+// to flatten multiple depths and no duplicates should be present in the flattened array
+const arr4 = [1, 2, 3, 4, 5, [6, 7, [8]], [6, 7]];
+const newArr3 = [];
+const flattenArray2 = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      flattenArray2(arr[i]);
+    } else {
+      if (newArr3.indexOf(arr[i]) === -1) {
+        newArr3.push(arr[i]);
+      }
+    }
+  }
+};
+
+flattenArray2(arr4);
+console.log(newArr3);
