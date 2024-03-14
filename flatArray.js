@@ -18,3 +18,16 @@ console.log(newArr);
 
 // to flatten multiple depths
 const arr3 = [1, 2, 3, 4, 5, [6, 7, [8]]];
+const newArr2 = [];
+const flattenArray = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      flattenArray(arr[i]);
+    } else {
+      newArr2.push(arr[i]);
+    }
+  }
+};
+
+flattenArray(arr3);
+console.log(newArr2);
